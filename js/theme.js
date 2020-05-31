@@ -109,6 +109,12 @@
     /*  Simple LightBox js
     /*----------------------------------------------------*/
     $('.imageGallery1 .light').simpleLightbox();
+
+    $(function() {
+        $(this).bind("contextmenu", function(e) {
+            e.preventDefault();
+        });
+    });
 	
 	$('.counter').counterUp({
 		delay: 10,
