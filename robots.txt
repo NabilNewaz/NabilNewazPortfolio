@@ -1,8 +1,8 @@
 User-agent: *
-Allow: /
+Disallow: /
 
 User-agent: GoogleBot-Mobile
 Disallow: /services
-Allow: /
+Disallow: /
 
 Sitemap: https://www.nabilnewaz.com/sitemap.xml
