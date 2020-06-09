@@ -38,23 +38,47 @@
         <link rel="stylesheet" href="/./css/responsive.css">
     </head>
     <body>
-		<!--================Right Click Disable =================-->
-		<script>
-			var isNS = (navigator.appName == "Netscape") ? 1 : 0;
-			if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
-			function mischandler(){
-			return false;
-			}
-			function mousehandler(e){
-			var myevent = (isNS) ? e : event;
-			var eventbutton = (isNS) ? myevent.which : myevent.button;
-			if((eventbutton==2)||(eventbutton==3)) return false;
-			}
-			document.oncontextmenu = mischandler;
-			document.onmousedown = mousehandler;
-			document.onmouseup = mousehandler;
-		</script>
-		<!--================End Right Click Disable =================-->
+		<!--================ Disable right-click of mouse, F12 key, and save key combinations on page =================-->
+		<script language="JavaScript">
+			window.onload = function() {
+			  document.addEventListener("contextmenu", function(e){
+				e.preventDefault();
+			  }, false);
+			  document.addEventListener("keydown", function(e) {
+			  //document.onkeydown = function(e) {
+				// "I" key
+				if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+				  disabledEvent(e);
+				}
+				// "J" key
+				if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+				  disabledEvent(e);
+				}
+				// "S" key + macOS
+				if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+				  disabledEvent(e);
+				}
+				// "U" key
+				if (e.ctrlKey && e.keyCode == 85) {
+				  disabledEvent(e);
+				}
+				// "F12" key
+				if (event.keyCode == 123) {
+				  disabledEvent(e);
+				}
+			  }, false);
+			  function disabledEvent(e){
+				if (e.stopPropagation){
+				  e.stopPropagation();
+				} else if (window.event){
+				  window.event.cancelBubble = true;
+				}
+				e.preventDefault();
+				return false;
+			  }
+			};
+		  </script>
+		<!--================End Disable right-click of mouse, F12 key, and save key combinations on page =================-->
         
         <!--================Header Menu Area =================-->
         <header class="header_area">
@@ -119,7 +143,7 @@
 									<ul class="list basic_info">
 										
 										<li><a href="tel:+8801714940700"><i class="lnr lnr-phone-handset"></i>+8801714-940700</a></li>
-										<li><a href="mailto:nabilnewaz@gmail.com"><i class="lnr lnr-envelope"></i>nabilnewaz@gmail.com</a></li>
+										<li><a href="mailto:contact@nabilnewaz.com"><i class="lnr lnr-envelope"></i>contact@nabilnewaz.com</a></li>
 										<li><a href="https://www.google.com/maps/@23.7612002,90.3641564,17z" target="_blank"><i class="lnr lnr-home"></i> Mohammadpur, Dhaka, Bangladesh</a></li>
 									</ul>
 									<ul class="list personal_social">
