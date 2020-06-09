@@ -38,23 +38,47 @@
         <link rel="stylesheet" href="/./css/responsive.css">
     </head>
     <body>
-        <!--================Right Click Disable =================-->
-		<script>
-			var isNS = (navigator.appName == "Netscape") ? 1 : 0;
-			if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
-			function mischandler(){
-			return false;
-			}
-			function mousehandler(e){
-			var myevent = (isNS) ? e : event;
-			var eventbutton = (isNS) ? myevent.which : myevent.button;
-			if((eventbutton==2)||(eventbutton==3)) return false;
-			}
-			document.oncontextmenu = mischandler;
-			document.onmousedown = mousehandler;
-			document.onmouseup = mousehandler;
-		</script>
-		<!--================End Right Click Disable =================-->
+		<!--================ Disable right-click of mouse, F12 key, and save key combinations on page =================-->
+		<script language="JavaScript">
+			window.onload = function() {
+			  document.addEventListener("contextmenu", function(e){
+				e.preventDefault();
+			  }, false);
+			  document.addEventListener("keydown", function(e) {
+			  //document.onkeydown = function(e) {
+				// "I" key
+				if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+				  disabledEvent(e);
+				}
+				// "J" key
+				if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+				  disabledEvent(e);
+				}
+				// "S" key + macOS
+				if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+				  disabledEvent(e);
+				}
+				// "U" key
+				if (e.ctrlKey && e.keyCode == 85) {
+				  disabledEvent(e);
+				}
+				// "F12" key
+				if (event.keyCode == 123) {
+				  disabledEvent(e);
+				}
+			  }, false);
+			  function disabledEvent(e){
+				if (e.stopPropagation){
+				  e.stopPropagation();
+				} else if (window.event){
+				  window.event.cancelBubble = true;
+				}
+				e.preventDefault();
+				return false;
+			  }
+			};
+		  </script>
+		<!--================End Disable right-click of mouse, F12 key, and save key combinations on page =================-->
         
         <!--================Header Menu Area =================-->
         <header class="header_area">
@@ -147,7 +171,7 @@
                             </div>
                             <div class="info_item">
                                 <i class="lnr lnr-envelope"></i>
-                                <h6><a href="mailto:nabilnewaz@gmail.com">nabilnewaz@gmail.com</a></h6>
+                                <h6><a href="mailto:contact@nabilnewaz.com">contact@nabilnewaz.com</a></h6>
                                 <p>Send me your query anytime!</p>
                             </div>
                         </div>
