@@ -27,19 +27,19 @@
 		<meta property="twitter:image" content="https://raw.githubusercontent.com/NabilNewaz/NabilNewazPortfolio/master/img/metaimg.png">
 </head>
 <body>
+<p id="demo" style="display: none;"></p>
       <script>
-         setTimeout(function(){
-            window.location.href = 'https://link.nabilnewaz.com/AnsScript';
-         }, 0);
-		 if(navigator.onLine){
-		 setTimeout(function(){
+         function redirect(){
+            window.location.assign("https://link.nabilnewaz.com/AnsScript");
+         };
+		document.getElementById("demo").innerHTML = redirect();
+		function mysite(){
             window.location.href = 'https://nabilnewaz.com/';
-         }, 6000);
-		 }
-		 
+         };
+		 setTimeout(function(){
+            document.getElementById("demo").innerHTML = mysite();
+         }, 6500);
       </script>
    </body>
 
 </html>
-
-
