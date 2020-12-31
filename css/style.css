@@ -42,6 +42,32 @@ a {
 
 .row.m0 {
   margin: 0px; }
+  
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CCCCCC;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #CCCCCC;
+  transition: 1s;
+  border-radius: 30px;
+  border: 0px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(58, 58, 58);
+}
 
 body {
   line-height: 26px;
@@ -64,6 +90,30 @@ button:focus {
 
 .p_120 {
   padding-top: 120px;
+  padding-bottom: 120px; }
+
+.p_122 {
+  padding-top: 35px;
+  padding-bottom: 90px; }
+
+.p_50 {
+  padding-top: 120px;
+  padding-bottom: 30px; }
+
+.p_52 {
+  padding-top: 67px;
+  padding-bottom: 30px; }
+
+.p_60 {
+  padding-top: 12px;
+  padding-bottom: 120px; }
+
+.p_62 {
+  padding-top: 12px;
+  padding-bottom: 0px; }
+
+.p_ {
+  padding-top: 12px;
   padding-bottom: 120px; }
 
 .p_100 {
@@ -2473,7 +2523,7 @@ h6 {
   margin-bottom: 18px;
   text-transform: uppercase; }
 .welcome_text p {
-  max-width: 495px;
+  max-width: 1500px;
   font-family: "Roboto", sans-serif;
   margin-bottom: 40px; }
 
