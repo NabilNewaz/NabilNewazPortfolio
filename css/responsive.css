@@ -330,6 +330,28 @@
 		padding-top: 70px;
 		padding-bottom: 70px;
 	}
+
+	.p_122 {
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}
+
+	.p_50 {
+		padding-top: 70px;
+		padding-bottom: 0px; }
+		
+	.p_52 {
+		padding-top: 70px;
+		padding-bottom: 0px; }
+	
+	.p_60 {
+		padding-top: 0px;
+		padding-bottom: 70px; }
+
+	.p_62 {
+		padding-top: 0px;
+		padding-bottom: 0px; }
+		
 	.main_title h2 {
 		font-size: 25px;
 	}
