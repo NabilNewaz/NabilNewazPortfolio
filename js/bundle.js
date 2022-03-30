@@ -3878,10 +3878,8 @@ r = {}, o.m = n = [function(e, t, n) {
         return (e = e.target || e.srcElement || window).correspondingUseElement && (e = e.correspondingUseElement), 3 === e.nodeType ? e.parentNode : e
     }
 
-    function st(e) {
-        if (!C) return !1;
-        var t = (e = "on" + e) in document;
-        return t || ((t = document.createElement("div")).setAttribute(e, "return;"), t = "function" == typeof t[e]), t
+    function st(e, t) {
+        e.blockedOn === t && (e.blockedOn = null, bt || (bt = !0, i.unstable_scheduleCallback(i.unstable_NormalPriority, Mt)))
     }
     var ft = [];
 
