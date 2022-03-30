@@ -8938,7 +8938,7 @@ r = {}, o.m = n = [function(e, t, n) {
         })), r.push.apply(r, n)), r
     }
     var H = {
-            callToAction: "Message Us",
+            callToAction: "Message Me",
             greetingMessage: "Hello, how may we help you? Just send us a message now to get assistance.",
             greetingMessageDelay: 5e3,
             callToActionDelay: 3e3,
