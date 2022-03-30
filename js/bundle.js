@@ -10504,13 +10504,13 @@ r = {}, o.m = n = [function(e, t, n) {
             facebook: function(e) {
                 var t = e.size,
                     n = V.facebookChat ? null : function() {
-                        if (L()) return N() ? "fb-messenger://user-thread/".concat(V.facebook) : "fb-messenger://user/".concat(V.facebook);
+                        if (L()) return N() ? "https://m.me/".concat(V.facebook) : "https://m.me/".concat(V.facebook);
                         switch (z()) {
                             case "firefox":
                             case "edg":
                                 return "https://m.me/".concat(V.facebook);
                             case "safari":
-                                return "https://www.facebook.com/messages/t/".concat(V.facebook)
+                                return "https://m.me/".concat(V.facebook)
                         }
                     }(),
                     r = !!V.facebookColor && V.facebookColor,
@@ -10704,42 +10704,6 @@ r = {}, o.m = n = [function(e, t, n) {
                 }, _.a.createElement(At, null, _.a.createElement("a", {
                     href: "sms:".concat(V.sms)
                 }, V.sms)))
-            },
-            facebook: function() {
-                var e = "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F".concat(V.facebook, "&tabs=messages&width=302&height=300&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"),
-                    t = pt(Object(P.useState)(!1), 2),
-                    n = t[0],
-                    r = t[1],
-                    o = Object(P.useContext)(pe),
-                    i = o.state,
-                    a = o.actions,
-                    l = (a.closeGreetingMessage, a.closeButtonPopupFB);
-                return Object(P.useEffect)(function() {
-                    r("facebook" === i.buttonPopup)
-                }), V.facebookChat ? (Object(P.useEffect)(function() {
-                    function e() {
-                        l()
-                    }
-                    var t = document.getElementsByClassName("fb-customerchat")[0];
-                    t && t.parentNode.removeChild(t);
-                    var n, r, o, i, a = document.createElement("div");
-                    a.setAttribute("class", "fb-customerchat"), a.setAttribute("page_id", V.facebook), a.setAttribute("greeting_dialog_display", "fade"), document.body.appendChild(a), window.fbAsyncInit = function() {
-                        FB.init({
-                            xfbml: !0,
-                            version: "v10.0"
-                        }), D() && FB.CustomerChat.hide(), FB.CustomerChat.hideDialog(), FB.Event.subscribe("customerchat.dialogHide", e)
-                    }, n = document, r = "facebook-jssdk", i = n.getElementsByTagName("script")[0], n.getElementById(r) || ((o = n.createElement("script")).id = r, o.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js", i.parentNode.insertBefore(o, i))
-                }, []), _.a.createElement("span", null)) : _.a.createElement(et, {
-                    color: oe.facebook.color,
-                    messengerTitle: oe.facebook.title,
-                    icon: _.a.createElement(st, null),
-                    enablePopup: n
-                }, _.a.createElement(mt, {
-                    scrolling: "no",
-                    frameBorder: "0",
-                    allowtransparency: "true",
-                    src: e
-                }))
             },
             snapchat: function() {
                 var e = "https://feelinsonice-hrd.appspot.com/web/deeplink/snapcode?username=".concat(V.snapchat, "&type=PNG"),
