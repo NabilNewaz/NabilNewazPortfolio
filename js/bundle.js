@@ -10501,30 +10501,42 @@ r = {}, o.m = n = [function(e, t, n) {
                     customIcon: o
                 })
             },
+			whatsapp: function(e) {
+                var t = e.size,
+                    n = V.whatsapp.match(/\d+/g).join(""),
+                    r = "https://wa.me/8801580446839";
+                V.preFilledMessage && (r = "".concat(r, "?text=").concat(encodeURIComponent(V.preFilledMessage)));
+                var o = !!V.whatsappColor && V.whatsappColor,
+                    i = !!V.whatsappIcon;
+                return _.a.createElement(Fe, {
+                    size: t,
+                    name: "whatsapp",
+                    link: r,
+                    target: "_blank",
+                    icon: _.a.createElement(Nt, {
+                        size: t
+                    }),
+                    color: o,
+                    customIcon: i
+                })
+            },
             facebook: function(e) {
                 var t = e.size,
-                    n = V.facebookChat ? null : function() {
-                        if (L()) return N() ? "https://m.me/".concat(V.facebook) : "https://m.me/".concat(V.facebook);
-                        switch (z()) {
-                            case "firefox":
-                            case "edg":
-                                return "https://m.me/".concat(V.facebook);
-                            case "safari":
-                                return "https://m.me/".concat(V.facebook)
-                        }
-                    }(),
-                    r = !!V.facebookColor && V.facebookColor,
-                    o = !!V.facebookIcon;
+                    n = V.facebookChat.match(/\d+/g).join(""),
+					r = "https://m.me/nabil.newaz.5";
+                V.preFilledMessage && (r = "".concat(r, "?text=").concat(encodeURIComponent(V.preFilledMessage)));
+				var o = !!V.facebookColor && V.facebookColor,
+                    i = !!V.facebookIcon;	
                 return _.a.createElement(Fe, {
                     size: t,
                     name: "facebook",
-                    link: n,
+                    link: r,
                     target: "_blank",
                     icon: _.a.createElement(st, {
                         size: t
                     }),
-                    color: r,
-                    customIcon: o
+                    color: o,
+                    customIcon: i
                 })
             },
             snapchat: function(e) {
@@ -10633,25 +10645,6 @@ r = {}, o.m = n = [function(e, t, n) {
                     }),
                     color: r,
                     customIcon: o
-                })
-            },
-            whatsapp: function(e) {
-                var t = e.size,
-                    n = V.whatsapp.match(/\d+/g).join(""),
-                    r = "https://wa.me/8801580446839";
-                V.preFilledMessage && (r = "".concat(r, "?text=").concat(encodeURIComponent(V.preFilledMessage)));
-                var o = !!V.whatsappColor && V.whatsappColor,
-                    i = !!V.whatsappIcon;
-                return _.a.createElement(Fe, {
-                    size: t,
-                    name: "whatsapp",
-                    link: r,
-                    target: "_blank",
-                    icon: _.a.createElement(Nt, {
-                        size: t
-                    }),
-                    color: o,
-                    customIcon: i
                 })
             },
             link: function(e) {
