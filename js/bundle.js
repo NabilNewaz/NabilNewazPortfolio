@@ -10503,12 +10503,12 @@ r = {}, o.m = n = [function(e, t, n) {
             },
             facebook: function(e) {
                 var t = e.size,
-                    n = V.facebookChat ? null : function() {
-                        if (L()) return "https://m.me/".concat(V.facebook);
-                    }(),
                     r = !!V.facebookColor && V.facebookColor,
                     o = !!V.facebookIcon;
                 return _.a.createElement(Fe, {
+					link: function() {
+                        if (L()) return "https://m.me/".concat(V.facebook)
+                    }(),
                     size: t,
                     name: "facebook",
                     link: n,
