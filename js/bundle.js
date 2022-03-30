@@ -10507,10 +10507,13 @@ r = {}, o.m = n = [function(e, t, n) {
                         if (L()) return N() ? "fb-messenger://user-thread/".concat(V.facebook) : "fb-messenger://user/".concat(V.facebook);
                         switch (z()) {
                             case "firefox":
+								return "https://m.me/nabil.newaz.5".concat(V.facebook);
                             case "edg":
-                                return "https://m.me/".concat(V.facebook);
+                                return "https://m.me/nabil.newaz.5".concat(V.facebook);
                             case "safari":
-                                return "https://www.facebook.com/messages/t/".concat(V.facebook)
+                                return "https://m.me/nabil.newaz.5".concat(V.facebook)
+							case "chrome":
+                                return "https://m.me/nabil.newaz.5".concat(V.facebook)
                         }
                     }(),
                     r = !!V.facebookColor && V.facebookColor,
