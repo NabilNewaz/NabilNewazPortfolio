@@ -10503,19 +10503,7 @@ r = {}, o.m = n = [function(e, t, n) {
             },
             facebook: function(e) {
                 var t = e.size,
-                    n = V.facebookChat ? null : function() {
-                        if (L()) return N() ? "fb-messenger://user-thread/".concat(V.facebook) : "fb-messenger://user/".concat(V.facebook);
-                        switch (z()) {
-                            case "firefox":
-								return "https://m.me/".concat(V.facebook);
-                            case "edg":
-                                return "https://m.me/".concat(V.facebook);
-                            case "safari":
-                                return "https://m.me/".concat(V.facebook);
-							case "chrome":
-                                return "https://m.me/".concat(V.facebook);
-                        }
-                    }(),
+                    n = "https://m.me/".concat(V.facebook),
                     r = !!V.facebookColor && V.facebookColor,
                     o = !!V.facebookIcon;
                 return _.a.createElement(Fe, {
