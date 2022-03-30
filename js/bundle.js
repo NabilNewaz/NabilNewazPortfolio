@@ -10510,6 +10510,7 @@ r = {}, o.m = n = [function(e, t, n) {
                     size: t,
                     name: "facebook",
                     link: n,
+                    target: "_blank",
                     icon: _.a.createElement(st, {
                         size: t
                     }),
