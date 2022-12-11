@@ -41,6 +41,26 @@ Table of Content:
   border: none;
 }
 
+#skills {
+  scroll-margin-block-start: 40px;
+}
+
+#services {
+  scroll-margin-block-start: 40px;
+}
+
+#project {
+  scroll-margin-block-start: 40px;
+}
+
+#experience {
+  scroll-margin-block-start: 40px;
+}
+
+#contact {
+  scroll-margin-block-start: 40px;
+}
+
 .list {
   list-style: none;
   margin: 0px;
