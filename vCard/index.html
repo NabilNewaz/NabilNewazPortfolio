@@ -23,100 +23,96 @@
    <link rel="prefetch" href="/static/js/7406.a3a58f0e.chunk.js" as="script">
    <link rel="prefetch" href="/static/js/main.3eb05d31.js" as="script">
    <link rel="prefetch" href="/static/js/main.3eb05d31.js" as="script"> -->
-   
-   	<meta itemprop="name" content="Nabil Newaz - vCard">
-	<meta itemprop="description"
-		content="Nabil Newaz's NFC Enabled Vertual Buseness Card.">
-	<meta itemprop="image"
-		content="images/d8a7bf71-4b51-41a6-8351-ad3d2d0f266d2.webp">
-   
+
+   <meta itemprop="name" content="Nabil Newaz - vCard">
+   <meta itemprop="description" content="Nabil Newaz's NFC Enabled Vertual Buseness Card.">
+   <meta itemprop="image" content="images/d8a7bf71-4b51-41a6-8351-ad3d2d0f266d3.webp">
+
    <meta property="og:type" content="website">
    <meta property="og:url" content="https://nabilnewaz.com/vCard">
    <meta property="og:title" content="Nabil Newaz - vCard">
-   <meta property="og:description"
-      content="Nabil Newaz's NFC Enabled Vertual Buseness Card.">
-   <meta property="og:image" content="images/d8a7bf71-4b51-41a6-8351-ad3d2d0f266d2.webp">
+   <meta property="og:description" content="Nabil Newaz's NFC Enabled Vertual Buseness Card.">
+   <meta property="og:image" content="images/d8a7bf71-4b51-41a6-8351-ad3d2d0f266d3.webp">
    <meta property="twitter:card" content="summary_large_image">
    <meta property="twitter:url" content="https://nabilnewaz.com/vCard">
    <meta property="twitter:title" content="Nabil Newaz - vCard">
-   <meta property="twitter:description"
-      content="Nabil Newaz's NFC Enabled Vertual Buseness Card.">
-   <meta property="twitter:image" content="images/d8a7bf71-4b51-41a6-8351-ad3d2d0f266d2.webp">
+   <meta property="twitter:description" content="Nabil Newaz's NFC Enabled Vertual Buseness Card.">
+   <meta property="twitter:image" content="images/d8a7bf71-4b51-41a6-8351-ad3d2d0f266d3.webp">
    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <script src="js/prettify.min.js"></script>
+   <script src="js/prettify.min.js"></script>
    <script src="js/topbar.min.js"></script>
-       <script>
-      $(function() {
-          prettyPrint()
-          function resetToDefaults() {
+   <script>
+      $(function () {
+         prettyPrint()
+         function resetToDefaults() {
             topbar.config({
-              autoRun      : true,
-              barThickness : 4,
-              barColors    : {
-                '0'      : 'rgba(98,  62, 130, .8)', 
-                '.25'    : 'rgba(98,  62, 130, .8)',
-                '.50'    : 'rgba(98,  62, 130,  .8)',
-                '.75'    : 'rgba(98,  62, 130,  .8)',
-                '1.0'    : 'rgba(98,  62, 130,  .8)'
-              },
-              shadowBlur   : 10,
-              shadowColor  : 'rgba(0,   0,   0,   .6)',
-              className    : 'topbar'
+               autoRun: true,
+               barThickness: 4,
+               barColors: {
+                  '0': 'rgba(41, 4, 121, .8)',
+                  '.25': 'rgba(41, 4, 121, .8)',
+                  '.50': 'rgba(41, 4, 121,  .8)',
+                  '.75': 'rgba(41, 4, 121,  .8)',
+                  '1.0': 'rgba(41, 4, 121,  .8)'
+               },
+               shadowBlur: 10,
+               shadowColor: 'rgba(0,   0,   0,   .6)',
+               className: 'topbar'
             })
-          }
+         }
 
-          // Page load
-          resetToDefaults()
-          topbar.show()
-          setTimeout(function() {
+         // Page load
+         resetToDefaults()
+         topbar.show()
+         setTimeout(function () {
             $('#main_content').fadeIn('slow')
             topbar.hide()
-          }, 1500)
+         }, 1500)
 
-          // Simple Demo
-          $('#btnStartSimple').click(function() {
+         // Simple Demo
+         $('#btnStartSimple').click(function () {
             resetToDefaults()
             topbar.show()
-          })
-          $('#btnStopSimple').click(function() {
+         })
+         $('#btnStopSimple').click(function () {
             topbar.hide()
-          })
+         })
 
-          // Delayed Demo
-          $('#btnStartDelayed').click(function() {
+         // Delayed Demo
+         $('#btnStartDelayed').click(function () {
             resetToDefaults()
             topbar.show(500)
-          })
-          $('#btnStopDelayed').click(function() {
+         })
+         $('#btnStopDelayed').click(function () {
             topbar.hide()
-          })
+         })
 
-          // Advanced Demo
-          $('#btnStartAdvanced').click(function() {
+         // Advanced Demo
+         $('#btnStartAdvanced').click(function () {
             resetToDefaults()
             topbar.config({
-              autoRun      : false, 
-              barThickness : 5,
-              barColors    : {
-                  '0'      : 'rgba(26,  188, 156, .7)',
-                  '.3'     : 'rgba(41,  128, 185, .7)',
-                  '1.0'    : 'rgba(231, 76,  60,  .7)'
-              },
-              shadowBlur   : 5,
-              shadowColor  : 'rgba(0, 0, 0, .5)'
+               autoRun: false,
+               barThickness: 5,
+               barColors: {
+                  '0': 'rgba(26,  188, 156, .7)',
+                  '.3': 'rgba(41,  128, 185, .7)',
+                  '1.0': 'rgba(231, 76,  60,  .7)'
+               },
+               shadowBlur: 5,
+               shadowColor: 'rgba(0, 0, 0, .5)'
             })
             topbar.show();
             (function step() {
-              setTimeout(function() {  
-                if (topbar.progress('+.01') < 1) step()
-              }, 16)
+               setTimeout(function () {
+                  if (topbar.progress('+.01') < 1) step()
+               }, 16)
             })()
-          })
-          $('#btnStopAdvanced').click(function() {
-            topbar.hide()  
-          })
+         })
+         $('#btnStopAdvanced').click(function () {
+            topbar.hide()
+         })
       })
-    </script>
+   </script>
    <style>
       body {
          font-family: Lato, sans-serif
@@ -1515,30 +1511,31 @@
       .jss31.jss38 {
          padding-top: 28px;
       }
-	  
-	  .animetion_img {
-		  max-width: 50%;
-		  height: auto;
-		  display: block;
-		    margin-left: auto;
-			margin-right: auto;
-		  padding-left:25px;
-		  padding-right:25px;
-		  position: relative;
-		  animation: mymove 1s 1;
-		  animation-timing-function: ease-in-out;
-		}
-		
-		@keyframes mymove {
-		  from {
-			margin-top: 200%;
-			height: 0%;
-		  }
-		  to {
-			margin-top: 0%;
-			height: 0%;
-		  }
-		}
+
+      .animetion_img {
+         max-width: 50%;
+         height: auto;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         padding-left: 25px;
+         padding-right: 25px;
+         position: relative;
+         animation: mymove 1s 1;
+         animation-timing-function: ease-in-out;
+      }
+
+      @keyframes mymove {
+         from {
+            margin-top: 200%;
+            height: 0%;
+         }
+
+         to {
+            margin-top: 0%;
+            height: 0%;
+         }
+      }
 
       @media (min-width:960px) {
          .jss31 {
@@ -1620,12 +1617,12 @@
             display: none;
          }
       }
-	  
-	  @media only screen and (max-width: 595px) {
-		.animetion_img {
-			  min-width: 100%;
-			}
-	  }
+
+      @media only screen and (max-width: 595px) {
+         .animetion_img {
+            min-width: 100%;
+         }
+      }
    </style>
    <style data-jss data-meta="Preview-Vcard"></style>
    <link rel="stylesheet" type="text/css" href="https://qrfy.com/static/css/7869.528df577.chunk.css">
@@ -1638,7 +1635,8 @@
    <div id="preloader">
       <div id="container" class="container-preloader">
          <div class="animation-preloader">
-	 <img class="animetion_img" src="images/d8a7bf71-4b51-41a6-8351-ad3d2d0f266d2.webp" alt="Img loader" style="transform: none; transition: transform 2500ms cubic-bezier(0, 0, 0.2, 1) 0ms;">
+            <img class="animetion_img" src="images/d8a7bf71-4b51-41a6-8351-ad3d2d0f266d3.webp" alt="Img loader"
+               style="transform: none; transition: transform 2500ms cubic-bezier(0, 0, 0.2, 1) 0ms;">
          </div>
          <div class="loader-section section-left"></div>
          <div class="loader-section section-right"></div>
@@ -2319,7 +2317,7 @@
       <div class="jss41 jss42">
          <div class="jss43 jss44">
             <div class="jss4">
-               <div class="jss5" style="background-color: rgb(98, 62, 130);">
+               <div class="jss5" style="background-color: rgb(41, 4, 121);">
                   <div class="jss7">
                      <div class="jss8"><img
                            src="https://img.qrfy.com/img/original/8093dd8f-76af-4bd4-b3c7-5f019043c76f.webp"
@@ -2736,7 +2734,7 @@
          </div>
          <div class="home-benefits"></div>
       </div> -->
-	  
+
    <script>
       $(document).ready(function () {
          setTimeout(function () {
